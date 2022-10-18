@@ -7,6 +7,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Form,
 } from "react-router-dom";
 
 function VideoBG(){
@@ -20,12 +21,18 @@ function VideoBG(){
   }
 }
 
+function NavbarDelete(){
+  if(!window.location.href.includes('join')){
+    return <NavBar logged={false} />
+  }
+}
+
 function App() {
   return (
     <div class="main" id="main" >
       <VideoBG/>
       <div class="content  ">
-        <NavBar logged={true} />
+        <NavbarDelete/>
         <Router>
           <Routes>
             <Route path="/home" element={<Home />}></Route>
