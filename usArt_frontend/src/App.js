@@ -23,7 +23,7 @@ function App() {
     <div class="main" >
       <VideoBG/>
       <div class="content  ">
-        <NavBar logged={true} />
+        <NavBar logged={false} />
         <Router>
           <Routes>
             <Route path="/home" element={<Home />}></Route>

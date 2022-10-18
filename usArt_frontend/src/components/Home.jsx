@@ -16,7 +16,6 @@ const Home = () => {
                         <input type="search" class="form-control " placeholder="Search" aria-label="Search" aria-describedby="search-addon"  />
                         <span class="input-group-text border-0 pl-3" id="search-addon">
                         <BsSearch/>
-                        hola
                         </span>
                   </div>
                   <div class="flex my-4 row">
