@@ -8,13 +8,18 @@ video {
 }
 
 html {
+  /*
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-  background-image: url("assets/image1.jpg") ;
+  background-size: 200vh;
+  background-image: url("assets/image1.jpg");
+  background-repeat: repeat-y;*/
+  background-color: #28344E;
+  overflow-x: hidden;
 
 }
+
 
 
 .content {

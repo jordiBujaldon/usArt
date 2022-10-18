@@ -15,12 +15,14 @@ function VideoBG(){
     src = {video}
     autoplay="true" muted="true" loop="true"
   ></video>);
+  }else{
+    //document.html.style.backgroundImage = "url('assets/image1.jpg')";
   }
 }
 
 function App() {
   return (
-    <div class="main" >
+    <div class="main" id="main" >
       <VideoBG/>
       <div class="content  ">
         <NavBar logged={true} />
