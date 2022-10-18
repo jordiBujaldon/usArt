@@ -17,7 +17,7 @@ from 'mdb-react-ui-kit';
 function Register() {
   return (
     
-    <MDBContainer style={{marginTop:"14vmin"}} className="items-align-center justify-content-center" >
+    <MDBContainer style={{marginTop:"14vmin", paddingBottom:"10vmin"}} className="items-align-center justify-content-center " >
       <MDBCard className='text-black m-5 items-align-center' style={{borderRadius: '25px'}}>
         
         <MDBCardBody>
@@ -25,7 +25,7 @@ function Register() {
           <MDBRow>
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
-              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up.</p>
+              <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style={{color: "#001a1a"}}>Sign up.</p>
 
               <div className="d-flex flex-row align-items-center mb-4 text-center ">
 
