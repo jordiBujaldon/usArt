@@ -9,6 +9,7 @@ import {
   Routes,
   Route,
   Form,
+  useHistory 
 } from "react-router-dom";
 
 function VideoBG(){
@@ -28,6 +29,8 @@ function NavbarSelector(){
     return <NavBar logged={false} />
   }
 }
+
+
 
 function App() {
   return (
