@@ -7,7 +7,7 @@ function NoLoggedNavBar() {
   return (
     <nav class="navbar navbar-expand-sm navbar-light " aria-label="Offcanvas navbar small">
       <div class="container-fluid">
-        <a class="navbar-brand  p-4" href=""><h1>UsArt</h1></a>
+        <a class="navbar-brand  p-4" href="/home"><h1>UsArt</h1></a>
         <button class="navbar-toggler"
           type="button"
           data-bs-toggle="offcanvas"
