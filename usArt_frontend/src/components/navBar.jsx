@@ -7,7 +7,7 @@ function NoLoggedNavBar() {
   return (
     <nav class="navbar navbar-expand-sm navbar-light " aria-label="Offcanvas navbar small">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/home"><h1>UsArt</h1></a>
+        <a class="navbar-brand  p-4" href="/home"><h1>UsArt</h1></a>
         <button class="navbar-toggler"
           type="button" style={{background:"white"}}
           data-bs-toggle="offcanvas"
@@ -22,14 +22,14 @@ function NoLoggedNavBar() {
           </div>
           <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style={{zIndex:"2"}}>
-                <li class="nav-item">
-                  <a style={{color:"white"}} class="nav-link active" aria-current="page" href="/explore">Explore</a>
+                <li class="nav-item px-3">
+                  <a style={{color:"white"}} class="nav-link active underL px-3" aria-current="page" href="/explore">Explore</a>
                 </li>
-                <li class="nav-item">
-                  <a style={{color:"white"}} class="nav-link" href="/sign-in">Log in</a>
+                <li class="nav-item px-3">
+                  <a style={{color:"white"}} class="nav-link underL px-3" href="/sign-in">Log in</a>
                 </li>
-                <li class="nav-item">
-                  <a style={{color:"white"}} class="nav-link" href="/join">Join</a>
+                <li class="nav-item px-3">
+                  <a class="nav-link  px-3 landingNoRegisterJoin" href="/join">Join</a>
                 </li>
               </ul>
           </div>
