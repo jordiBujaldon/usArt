@@ -9,13 +9,13 @@ function NoLoggedNavBar() {
       <div class="container-fluid">
         <a class="navbar-brand  p-4" href="/home"><h1>UsArt</h1></a>
         <button class="navbar-toggler"
-          type="button"
+          type="button" style={{background:"white"}}
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasNavbar2"
           aria-controls="offcanvasNavbar2">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-start" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+        <div class="offcanvas offcanvas-start text-bg-dark" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
           <div class="offcanvas-header">
             <a  class="nav-link active"  id="offcanvasNavbar2Label" href="/home"><h1>UsArt</h1> </a>
             <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -54,7 +54,7 @@ function LoggedNavBar() {
         <div class="offcanvas offcanvas-start text-bg-dark"  id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbar2Label">UsArt</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 " style={{zIndex:"2"}}>

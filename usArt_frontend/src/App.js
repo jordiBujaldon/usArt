@@ -22,6 +22,7 @@ function VideoBG(){
   }
 }
 
+
 function NavbarSelector(){
   if(!window.location.href.includes('join')){
     return <NavBar logged={false} />

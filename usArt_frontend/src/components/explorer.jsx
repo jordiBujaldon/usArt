@@ -2,6 +2,25 @@ import { Component } from "react";
 import './explorerStyles.css'
 
 function renderCard(card, index) {
+  fetch("https://api.example.com/items")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoaded: true,
+            items: result.items
+          });
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          this.setState({
+            isLoaded: true,
+            error
+          });
+        }
+      )
   return (
     <div class="card box border-0" key={index}>
       <img src={card.image} class="card-img-top size" alt="imagen_pincel" ></img>
@@ -13,6 +32,7 @@ function renderCard(card, index) {
     </div>)
 }
 export default class explorer extends Component {
+  
   constructor(props) {
     super(props);
     this.cards = [
