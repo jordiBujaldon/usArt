@@ -28,6 +28,8 @@ a,p {
 .size-img {
 
     overflow: hidden;
+    max-height: 170px;
+    
     border-radius: 20px 20px 0 0;
 }
 
@@ -44,10 +46,10 @@ a,p {
     margin-bottom: 2%;
     background-image: url("https://discover.fiverr.com/wp-content/uploads/disover-main-banner-korshenboym-noresize-1.jpg");
     background-size: cover;
-    height: 30vh;
+    height: 25vh;
     color: white;
     align-items: center;
-    padding: 5% 2%;
+    padding: 3% 2%;
     background-repeat: repeat;
 
 }
@@ -78,7 +80,7 @@ a,p {
     border-style: solid;
     border-width: 2px;
     
-    width: 18rem;
+    width: 250px;
     max-height: 30vh;
     min-height: 300px;
 }
