@@ -17,7 +17,7 @@ const Home = () => {
                         <span class="input-group-text border-0 pl-3" id="search-addon">
                         <BsSearch/>
                         </span>
-                  </div>
+                        </div>
                   <div class="flex my-4 row">
                     <div class="col-2">
                     <p style={{color:"white"}}><strong> Popular: </strong></p>
