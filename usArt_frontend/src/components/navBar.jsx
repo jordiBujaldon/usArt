@@ -26,7 +26,7 @@ function NoLoggedNavBar() {
                   <a style={{color:"white"}} class="nav-link active underL px-3" aria-current="page" href="/explore">Explore</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a style={{color:"white"}} class="nav-link underL px-3" href="/sign-in">Log in</a>
+                  <a style={{color:"white"}} class="nav-link underL px-3" href="/login">Log in</a>
                 </li>
                 <li class="nav-item px-3">
                   <a class="nav-link  px-3 landingNoRegisterJoin" href="/join">Join</a>

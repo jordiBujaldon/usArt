@@ -47,7 +47,7 @@ export default class explorer extends Component {
     return (
       <div>
         <div class="row header">
-          <h1>Explore el talento en Fiverr</h1>
+          <h1>Explore el talento en UsArt</h1>
           <p style={{color:"white"}}>Miles de personas ofrecen servicios de arte diariamente</p>
         </div>
         <div class="grid">
