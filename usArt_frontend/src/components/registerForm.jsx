@@ -17,10 +17,10 @@ function Register() {
   return (
     
     <MDBContainer style={{marginTop:"14vmin", paddingBottom:"10vmin"}} className="items-align-center justify-content-center " >
-      <MDBCard className='text-black m-5 items-align-center' style={{borderRadius: '25px'}}>
+      <MDBCard className='text-black m-5 items-align-center shadow' style={{borderRadius: '25px'}}>
         
-        <MDBCardBody>
-            <a href="/home"><BsFillArrowLeftSquareFill size='30' className='mx-3 my-3'/></a> 
+        <MDBCardBody className='shadow'>
+            <a href="/home"><BsFillArrowLeftSquareFill size='30' className='mx-3 my-3 shadow'/></a> 
           <MDBRow>
             <MDBCol md='10' lg='6' className='order-2 order-lg-1 d-flex flex-column align-items-center'>
 
@@ -28,25 +28,25 @@ function Register() {
 
               <div className="d-flex flex-row align-items-center mb-4 text-center ">
 
-                <MDBInput label='Your Name' id='form1' type='text' className='w-100'/>
+                <MDBInput label='Your Name' id='form1' type='text' className='w-100 shadow-sm '/>
                 
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4 text-center">
-                <MDBInput label='Your Email' id='form2' type='email'/>
+                <MDBInput label='Your Email' id='form2' type='email' className='shadow-sm'/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4 text-center">
-                <MDBInput label='Password' id='form3' type='password'/>
+                <MDBInput label='Password' id='form3' type='password' className='shadow-sm'/>
               </div>
 
               <div className="d-flex flex-row align-items-center mb-4 text-center">
-                <MDBInput label='Repeat your password' id='form4' type='password' />
+                <MDBInput label='Repeat your password' id='form4' type='password' className='shadow-sm' />
               </div>
 
     
 
-              <MDBBtn className='mb-5 mt-3' size='md'>Register</MDBBtn>
+              <MDBBtn className='mb-5 mt-3 shadow' size='md'>Register</MDBBtn>
               Already have an account? <a href='/login' className='mb-3'><strong>Log in</strong></a>
             </MDBCol>
 
