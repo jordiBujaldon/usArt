@@ -6,36 +6,76 @@
     align-items: center;
     margin-inline-start: 2%;
     margin-inline-end: 2%;
-    
+
 }
 
-a,p{
+@media only screen and (max-width: 1280px) {
+    .grid {
+        min-height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+}
+
+a,p {
     color: black;
 }
-.box {
-    margin-left: 20px;
-    width: 18rem;
-}
-.size{
-    max-height:40vh;
-}   
-    
-.max{
-    height: 5vh;
+
+
+.size-img {
+
     overflow: hidden;
-    text-overflow: ellipsis;
+    border-radius: 20px 20px 0 0;
 }
 
-.header{
+.max {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+
+}
+
+.header {
     margin-bottom: 2%;
     background-image: url("https://discover.fiverr.com/wp-content/uploads/disover-main-banner-korshenboym-noresize-1.jpg");
     background-size: cover;
     height: 30vh;
-    color:white; 
-    align-items: center; 
+    color: white;
+    align-items: center;
     padding: 5% 2%;
     background-repeat: repeat;
+
+}
+
+.custom {
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.0.8);
+    border-style: solid;
+    border-width: 2px;
     
+    width: 18rem;
+    max-height: 30vh;
 }
 
 
+
+.custom:hover {
+    z-index: 2;
+    box-shadow: none;
+    transform: scale(1.03);
+    box-shadow: 0 2px 12px 0 rgba(255, 255, 255, 0.8);
+
+
+}

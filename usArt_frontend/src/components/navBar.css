@@ -1,5 +1,6 @@
 .navbar-brand{
   color: white;
+  z-index: 2;
 }
 
 
