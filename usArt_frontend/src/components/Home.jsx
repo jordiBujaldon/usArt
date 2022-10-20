@@ -12,12 +12,18 @@ const Home = () => {
               </div>
               <div class = "col-sm">
                     <h1 class="w-75 pb-4">Art is not what you see, but what you make <i> others </i> see.</h1>
-                        <div class="input-group rounded">
-                        <input type="search" class="form-control " placeholder="Search" aria-label="Search" aria-describedby="search-addon"  />
-                        <span class="input-group-text border-0 pl-3" id="search-addon">
-                        <BsSearch/>
-                        </span>
-                        </div>
+                      <div class="container justify-content-center">
+                            <div class="row">
+                              <div class="col-md-8">                             
+                                <div class="input-group mb-3">
+                                <input type="text" class="form-control input-text" placeholder="Search products...." aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+                                <div class="input-group-append">
+                                  <button class="btn btn-outline-warning btn-lg" type="button"><i class="fa fa-search"></i></button>
+                                </div>
+                              </div>                         
+                              </div>                              
+                            </div>                                                        
+                      </div>
                   <div class="flex my-4 row">
                     <div class="col-2">
                     <p style={{color:"white"}}><strong> Popular: </strong></p>
