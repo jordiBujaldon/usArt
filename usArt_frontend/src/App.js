@@ -2,6 +2,7 @@ import NavBar from './components/navBar';
 import video from "./assets/bgVideo.mp4"
 import Home from './components/Home';
 import Register from './components/registerForm'
+import LogIn from './components/loginForm'
 import Explorer from './components/explorer';
 import "./app.css"
 import {
@@ -25,7 +26,7 @@ function VideoBG(){
 
 
 function NavbarSelector(){
-  if(!window.location.href.includes('join')){
+  if(!window.location.href.includes('join') && (!window.location.href.includes('login')) ){
     return <NavBar logged={false} />
   }
 }
@@ -43,6 +44,7 @@ function App() {
             <Route path="/home" element={<Home />}></Route>
             <Route path="/explore" element={<Explorer />}></Route>
             <Route path="/join" element={<Register />}></Route>
+            <Route path="/login" element={<LogIn />}></Route>
           </Routes>
         </Router>
       </div>
