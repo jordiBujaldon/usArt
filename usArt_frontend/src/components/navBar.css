@@ -2,7 +2,9 @@
   color: white;
   z-index: 2;
 }
-
+.nav-link {
+  color: white !important;
+}
 
 .underL {
   position: relative;
@@ -59,7 +61,6 @@
   background: rgba(0, 0, 0, 1);
   border-radius: 19px;
   z-index: -1;
-  color:white;
 
 }
 

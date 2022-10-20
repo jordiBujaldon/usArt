@@ -51,6 +51,19 @@ a,p {
     background-repeat: repeat;
 
 }
+@media only screen and (max-width: 1280px) {
+    .header {
+        margin-bottom: 2%;
+        background-image: url("https://discover.fiverr.com/wp-content/uploads/disover-main-banner-korshenboym-noresize-1.jpg");
+        background-size: cover;
+        color: white;
+        align-items: center;
+        padding: 5% 2%;
+        height: fit-content;
+        background-repeat: repeat;
+    
+    }
+}
 
 .custom {
     margin-left: 2%;
@@ -67,6 +80,7 @@ a,p {
     
     width: 18rem;
     max-height: 30vh;
+    min-height: 300px;
 }
 
 
