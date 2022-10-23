@@ -43,6 +43,12 @@ function Register() {
               <div className="d-flex flex-row align-items-center mb-4 text-center">
                 <MDBInput label='Repeat your password' id='form4' type='password' className='shadow-sm' />
               </div>
+              <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+              <label class="form-check-label" for="flexCheckDefault">
+              I agree to <a href='https://www.termsofusegenerator.net/'>Terms of Use</a> and <a href='https://www.termsofusegenerator.net/'>Privacy Policy</a> of UsArt
+              </label>
+              </div>
 
     
 
