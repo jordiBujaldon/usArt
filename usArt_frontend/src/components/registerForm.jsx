@@ -43,11 +43,12 @@ function Register() {
               <div className="d-flex flex-row align-items-center mb-4 text-center">
                 <MDBInput label='Repeat your password' id='form4' type='password' className='shadow-sm' />
               </div>
-              <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
-              <label class="form-check-label" for="flexCheckDefault">
-              I agree to <a href='https://www.termsofusegenerator.net/'>Terms of Use</a> and <a href='https://www.termsofusegenerator.net/'>Privacy Policy</a> of UsArt
-              </label>
+
+              <div class="form-check d-flex flex-row mb-4 text-center align-items-center justify-content-center">
+                <input class="form-check-input " type="checkbox" value="" id="flexCheckDefault"/>
+                <label class="form-check-label w-50" for="flexCheckDefault">
+                I agree to <a href='https://www.termsofusegenerator.net/'>Terms of Use</a>, <a href='https://www.termsofusegenerator.net/'>Privacy Policy</a> and receiving emails about usArt services 
+                </label>
               </div>
 
     
