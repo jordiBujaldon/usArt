@@ -33,6 +33,7 @@ a,p {
 }
 
 .max {
+    margin-top: -5%;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -92,3 +93,16 @@ a,p {
 
 
 }
+
+.errorApi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    
+    
+    
+}
+

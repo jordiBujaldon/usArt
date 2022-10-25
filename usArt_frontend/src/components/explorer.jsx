@@ -1,60 +1,63 @@
 import { Component } from "react";
 import './explorerStyles.css'
-import imageP from  '../assets/image1.jpg'
-import imageP2 from  '../assets/pincel.jpg'
-function renderCard(card, index) {
-  fetch("https://api.example.com/items")
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            isLoaded: true,
-            items: result.items
-          });
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          this.setState({
-            isLoaded: true,
-            error
-          });
-        }
-      )
+import imageP from '../assets/not-found-image.jpg'
+import imageP2 from '../assets/pincel.jpg'
+import { useState, useEffect } from "react";
+
+
+const errorHander = (error) =>{
+  const img = document.getElementById(error)
+  img.src = imageP
+  img.style.objectFit="cover"
+
+  
+}
+
+function RenderCard(card, index) {
   return (
     <div class="card custom" key={index}>
-      <img src={card.image} class="card-img-top size-img" alt="imagen_pincel" ></img>
+      <img id={index} src={card.image} onerror={errorHander(index)}
+        class="card-img-top size-img" alt="Sorry! not available at this time" ></img>
       <div class="card-body">
-        <h5 style={{color:"black"}}class="card-title">{card.title}</h5>
-        <p class="card-text max">{card.descripcion}</p>
+        <h5 style={{ color: "black" }} class="card-title">{card.title}</h5>
+        <p >{card.price}€</p>
+        <p class="card-text max">{card.description}</p>
       </div>
     </div>)
 }
-export default class explorer extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.cards = [
-      { image: imageP, title: "card 1", descripcion: "hola soy la card 1 y vendo vestidos de boda hechos a mano con el mejor material hola soy la card 1 y vendo vestidos de boda hechos a mano con el mejor material" },
-      { image: imageP2, title: "card 2", descripcion: "hola soy la card 1 y vendo vestidos de boda hechos a mano con el mejor material hola soy la card 1 y vendo vestidos de boda hechos a mano con el mejor material" },
-      { image: imageP, title: "card 3", descripcion: "hola soy la card 3" },
-      { image: imageP2, title: "card 4", descripcion: "hola soy la card 4" },
-      { image: imageP, title: "card 5", descripcion: "hola soy la card 5" },]
 
+export default function Explorer(){
+  
+  const [cards,setCards] = useState([]);
+
+  useEffect(callApi,[])
+
+  function callApi() {
+    fetch(
+      "http://localhost:8000/catalog/")
+      .then((res) => res.json())
+      .then(data => {
+        setCards(data)
+      }
+      )
   }
-  render() {
+
+  if (cards.length === 0) return <div class="errorApi"><h1>Cargando..</h1></div>
+
+  
+ 
+
     return (
       <div>
         <div class="row header border">
           <h1>Explore el talento en UsArt</h1>
-          <p style={{color:"white"}}>Miles de personas ofrecen servicios de arte diariamente</p>
+          <p style={{ color: "white" }}>Miles de personas ofrecen servicios de arte diariamente</p>
         </div>
         <div class="grid ">
-          {this.cards.map(renderCard)}
+          {cards.map(RenderCard)}
         </div>
       </div>)
   }
+  
 
 
-}
