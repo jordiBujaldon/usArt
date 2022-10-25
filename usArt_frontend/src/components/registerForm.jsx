@@ -20,8 +20,9 @@ function Register() {
   let navigate = useNavigate(); 
 
   const initialValues = { username: "", email: "", password: "", passwordRepeat:""};
-  let valueCheck = false;
+  let initialValue = false;
   const [formValues, setFormValues] = useState(initialValues);
+  const [checkValue, setCheckValue] = useState(initialValue);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
@@ -32,14 +33,14 @@ function Register() {
 
   };
   const handleCheck = (e) => {
-    valueCheck = e.target.checked;
-    console.log("valueCHeck 1: ", valueCheck)
+    let valueCheck = e.target.checked;
+    setCheckValue(valueCheck, checkValue)
     
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormErrors(validate(formValues));
+    setFormErrors(validate(formValues, checkValue));
     setIsSubmit(true);
   };
 
@@ -49,7 +50,7 @@ function Register() {
       console.log(formValues);
     }
   }, [formErrors]);
-  const validate = (values) => {
+  const validate = (values, checkValue) => {
     console.log("entro")
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -68,7 +69,8 @@ function Register() {
     }else if (values.password.length < 4) {
       errors.password = "Password must be more than 4 characters";
     } 
-    if (valueCheck == false){
+    console.log("checkValue 1: ", checkValue)
+    if (checkValue == false){
       errors.check = "You need to accept terms and conditions";
     }else{
       errors.check = "";
