@@ -66,6 +66,7 @@ function Register() {
 
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       modal.show()
+      navigate("/home");
     }
   }, [formErrors]);
   const validate = (values, checkValue) => {
@@ -161,7 +162,7 @@ function Register() {
                           <p>User was correctly created.</p>
                         </div>
                         <div className="modal-footer">
-                          <button onClick={() => modal.hide()} type="button" className="btn btn-outline-secondary">
+                          <button onClick={() =>  modal.hide()} type="button" className="btn btn-outline-secondary">
                             Great !
                           </button>
                         </div>
