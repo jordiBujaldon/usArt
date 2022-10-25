@@ -24,10 +24,13 @@ export default function Explorer() {
   if (cards.length === 0) return <div class="errorApi"><h1>Cargando..</h1></div>
 
   function RenderCard(card, index) {
+
     return (
       <div class="card custom" key={index}  >
-        <img id={index} src={card.image} 
-          class="card-img-top size-img" alt="Sorry! not available at this time" ></img>
+        <picture >
+          <source  srcset={card.image} ></source>
+          <img id={index} src={imageP} class="card-img-top size-img" alt="Sorry! not available at this time" ></img> 
+        </picture>
         <div class="card-body">
           <h5 style={{ color: "black" }} class="card-title">{card.title}</h5>
           <p >{card.price}€</p>
@@ -35,7 +38,7 @@ export default function Explorer() {
         </div>
       </div>)
   }
- 
+
 
 
   return (
