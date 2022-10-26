@@ -16,3 +16,8 @@ class ItemSerializer(serializers.Serializer):
         """
         return Item.objects.create(**validated_data)
     
+
+class ItemSerializer2(serializers.ModelSerializer):
+    class Meta:
+        model = Item
+        fields = ("id", "title", "description", "author", "price")
