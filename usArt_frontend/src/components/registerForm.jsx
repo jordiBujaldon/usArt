@@ -77,9 +77,15 @@ function Register() {
     console.log("entro")
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+    var usernameRegex = /^[a-zA-Z0-9.\$]{3,30}$/;
     var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\.-_!@#\$%\^&\*])(?=.{7,})");
     if (!values.username) {
       errors.username = "Username is required!";
+    }else if(values.username.length < 3){
+      errors.username = "Username must be 3 characters or more";
+    }
+    else if(!usernameRegex.test(values.username)){
+      errors.username = "Username must not contain special characters";
     }
     if (!values.email) {
       errors.email = "Email is required!";
