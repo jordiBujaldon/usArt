@@ -37,10 +37,6 @@ function Register() {
                 <MDBInput label='Password' id='form3' type='password'className='shadow-sm'/>
               </div>
 
-
-
-    
-
               <MDBBtn className='mb-5 mt-3 shadow' size='md'>Login</MDBBtn>
               Don't have an account? <a href='/join' className='mb-3'><strong>Sign up</strong></a>
             </MDBCol>

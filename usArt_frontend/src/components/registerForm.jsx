@@ -77,7 +77,7 @@ function Register() {
     console.log("entro")
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\.-_!@#\$%\^&\*])(?=.{8,})");
     if (!values.username) {
       errors.username = "Username is required!";
     }
@@ -90,8 +90,11 @@ function Register() {
       errors.password = "Password is required";
     } else if (values.password != values.passwordRepeat) {
       errors.password = "Password it is not the same";
-    } else if (!strongRegex.test(values.password)) {
-      errors.password = "Password must contain uppercase a number and a special character";
+    }else if (values.password.length <= 8) {
+      errors.password = "Password must be 8 characters or more";
+    } 
+    else if (!strongRegex.test(values.password)) {
+      errors.password = "Password must contain an uppercase letter, a number, and a special character";
     }
     if (checkValue == false) {
       errors.check = "You need to accept terms and conditions";
