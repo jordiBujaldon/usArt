@@ -141,7 +141,7 @@ function Register() {
                   <p className='text-danger mb-3'>{formErrors.password}</p>
 
                   <div class="form-check d-flex flex-row  text-center align-items-center justify-content-center">
-                    <input class="form-check-input " name="checkboxTerms" type="checkbox" id="flexCheckDefault" value={formValues.checkboxTerms} onChange={handleCheck} />
+                    <input class="form-check-input w-25 d-inline-block px-1 " name="checkboxTerms" type="checkbox" id="flexCheckDefault" value={formValues.checkboxTerms} onChange={handleCheck} />
                     <label class="form-check-label " for="flexCheckDefault" >
                       I agree to <a href='https://www.termsofusegenerator.net/'>Terms of Use</a>, <a href='https://www.termsofusegenerator.net/'>Privacy Policy</a> and receiving emails about usArt services
                     </label>
