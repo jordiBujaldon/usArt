@@ -1,19 +1,23 @@
+from django.contrib.auth.models import User
 from django.db import models
 
-# Create your models here.
-class Item(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.CharField(max_length=200)
-    author = models.CharField(max_length=200)
-    price = models.FloatField()
+
+class PublicationImage(models.Model):
+    image_path = models.ImageField()
 
     class Meta:
-        ordering = ['title', 'description', 'author']
+        ordering = ['image_path']
 
-"""
-class Service(models.Model):
-    title = models.CharField(max_length=100)
-    description = models.CharField(max_length=200)
-    author = models.CharField(max_length=200)
-    rate = models.IntegerField(default=0)
-"""
+
+class Publication(models.Model):
+    title = models.CharField(max_length=100, blank=False, required=True)
+    description = models.CharField(max_length=200, blank=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    price = models.FloatField()
+    images = models.ManyToManyField(PublicationImage, related_name='images')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering = ['title', 'description', 'author', 'price']
