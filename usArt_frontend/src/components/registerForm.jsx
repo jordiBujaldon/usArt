@@ -33,7 +33,11 @@ function Register() {
     
   }, [])
   /*MODAL*/
-
+  const modalChangerHome = (e) => {
+    window.location.assign("http://localhost:3000/home")
+  }
+  
+  
   const initialValues = { username: "", email: "", password: "", passwordRepeat: "" };
   let initialValue = false;
   const [formValues, setFormValues] = useState(initialValues);
@@ -59,6 +63,7 @@ function Register() {
     setFormErrors(validate(formValues, checkValue));
     setIsSubmit(true);
     console.log("erorre: ", formErrors)
+    
 
   };
 
@@ -66,7 +71,6 @@ function Register() {
 
     if (Object.keys(formErrors).length === 0 && isSubmit) {
       modal.show()
-      navigate("/home");
     }
   }, [formErrors]);
   const validate = (values, checkValue) => {
@@ -151,9 +155,9 @@ function Register() {
 
                   <button type="button" onClick={handleSubmit} class="btn btn-primary shadow mb-5 mt-3">Register</button>
 
-                  <div className="modal fade" tabIndex="-1" ref={parseExceptionModal} >
+                  <div className="modal fade" tabIndex="-1" ref={parseExceptionModal} onChange={modalChangerHome}>
                     <div className="modal-dialog">
-                      <div className="modal-content">
+                      <div className="modal-content" >
                         <div className="modal-header">
                           <h5 className="modal-title">Success</h5>
                           <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -162,7 +166,7 @@ function Register() {
                           <p>User was correctly created.</p>
                         </div>
                         <div className="modal-footer">
-                          <button onClick={() =>  modal.hide()} type="button" className="btn btn-outline-secondary">
+                          <button onClick={modalChangerHome} hidden={modalChangerHome}  type="button" className="btn btn-outline-secondary">
                             Great !
                           </button>
                         </div>
