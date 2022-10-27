@@ -90,7 +90,7 @@ function Register() {
       errors.password = "Password is required";
     } else if (values.password != values.passwordRepeat) {
       errors.password = "Password it is not the same";
-    }else if (values.password.length <= 8) {
+    }else if (values.password.length < 7) {
       errors.password = "Password must be 8 characters or more";
     } 
     else if (!strongRegex.test(values.password)) {
