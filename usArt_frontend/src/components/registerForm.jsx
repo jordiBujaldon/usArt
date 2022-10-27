@@ -77,7 +77,7 @@ function Register() {
     console.log("entro")
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\.-_!@#\$%\^&\*])(?=.{8,})");
+    var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\.-_!@#\$%\^&\*])(?=.{7,})");
     if (!values.username) {
       errors.username = "Username is required!";
     }
