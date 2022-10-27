@@ -30,14 +30,14 @@ function Register() {
   useEffect(() => {
     const modal = new Modal(parseExceptionModal.current, { keyboard: false })
     setModal(modal)
-    
+
   }, [])
   /*MODAL*/
   const modalChangerHome = (e) => {
     window.location.assign("http://localhost:3000/home")
   }
-  
-  
+
+
   const initialValues = { username: "", email: "", password: "", passwordRepeat: "" };
   let initialValue = false;
   const [formValues, setFormValues] = useState(initialValues);
@@ -63,7 +63,7 @@ function Register() {
     setFormErrors(validate(formValues, checkValue));
     setIsSubmit(true);
     console.log("erorre: ", formErrors)
-    
+
 
   };
 
@@ -96,7 +96,7 @@ function Register() {
     if (checkValue == false) {
       errors.check = "You need to accept terms and conditions";
     } else {
-      
+
     }
     return errors;
   };
@@ -144,14 +144,21 @@ function Register() {
                   </div>
                   <p className='text-danger mb-3'>{formErrors.password}</p>
 
-                  <div class="form-check d-flex flex-row  text-center align-items-center justify-content-center">
-                    <input class="form-check-input w-25 d-inline-block px-1 " name="checkboxTerms" type="checkbox" id="flexCheckDefault" value={formValues.checkboxTerms} onChange={handleCheck} />
-                    <label class="form-check-label " for="flexCheckDefault" >
-                      I agree to <a href='https://www.termsofusegenerator.net/'>Terms of Use</a>, <a href='https://www.termsofusegenerator.net/'>Privacy Policy</a> and receiving emails about usArt services
+                  <div class="form-check  text-center align-items-center justify-content-center">
+                    <input class="form-check-input d-inline-block px-1 " name="checkboxTerms" type="checkbox" id="flexCheckDefault" value={formValues.checkboxTerms} onChange={handleCheck} />
+                    <label class="form-check-label px-3 " for="flexCheckDefault" >
+                      I agree to <a href='https://www.termsofusegenerator.net/'>Terms of Use</a> and <a href='https://www.termsofusegenerator.net/'>Privacy Policy </a>of UsArt
                     </label>
-
                   </div>
                   <p className='text-danger'>{formErrors.check}</p>
+
+                  <div class="form-check  text-center align-items-center justify-content-center py-3">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2"/>
+                      <label class="form-check-label px-3 " for="flexCheckDefault2">
+                       I agree recieving emails about usArt services
+                      </label>
+                  </div>
+                  
 
                   <button type="button" onClick={handleSubmit} class="btn btn-primary shadow mb-5 mt-3">Register</button>
 
@@ -166,7 +173,7 @@ function Register() {
                           <p>User was correctly created.</p>
                         </div>
                         <div className="modal-footer">
-                          <button onClick={modalChangerHome} hidden={modalChangerHome}  type="button" className="btn btn-outline-secondary">
+                          <button onClick={modalChangerHome} hidden={modalChangerHome} type="button" className="btn btn-outline-secondary">
                             Great !
                           </button>
                         </div>
