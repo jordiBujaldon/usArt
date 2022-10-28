@@ -68,7 +68,7 @@ function LoggedNavBar() {
                   <a  class="nav-link underL px-3" href="/buzon">Buzon</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a  class="nav-link underL px-3" href="/perfil">Mi perfil</a>
+                  <a  class="nav-link underL px-3" href="/profile">Mi perfil</a>
                 </li>
               </ul>
           </div>
@@ -86,7 +86,8 @@ export default class navBar extends Component {
 
   }
   render() {
-    if(this.logged){
+    //#IMPORTANT: Quitar la negación.
+    if(!this.logged){
       return <LoggedNavBar/>
     }else{
       return <NoLoggedNavBar/>
