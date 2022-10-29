@@ -17,3 +17,5 @@ class Service(models.Model):
     author = models.CharField(max_length=200)
     rate = models.IntegerField(default=0)
 """
+
+
