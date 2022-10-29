@@ -1,6 +1,8 @@
 from django.urls import path
 from .views import ItemDetail
 from catalog import views
+from django.views.decorators.csrf import csrf_exempt
+
 
 
 
