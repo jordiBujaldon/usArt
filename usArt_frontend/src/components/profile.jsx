@@ -38,26 +38,27 @@ function Profile() {
                             </div>
                         </div>
                     </div>
-                    <div  class="row justify-content-md-center">
-                        <div class="card-body p-4 text-black  text-center col col-8">
-                            <div class="mb-5 rounded-top align-items-center" style={{ backgroundColor: "#f5f5f5" }}>
-                                <div class="btn-group px-4 py-3 ">
-                                    <input type="radio" class="btn-check " name="options" id="radio1" autocomplete="off" />
-                                    <label class="btn btn-dark" for="radio1">My products</label>
+                    <div class="row d-flex justify-content-center " >
+                        <div class="col-lg-8">
+                            <div class="card-body  p-4 text-black text-center ">
+                                <div class="mb-5 rounded-top " style={{ backgroundColor: "#f5f5f5" }}>
+                                    <div class="btn-group px-4 py-3 ">
+                                        <input type="radio" class="btn-check " name="options" id="radio1" autocomplete="off" />
+                                        <label class="btn btn-dark" for="radio1">My products</label>
+                                        <input type="radio" class="btn-check" name="options" id="radio2" autocomplete="off" />
+                                        <label class="btn btn-dark" for="radio2">My services</label>
+                                        <input type="radio" class="btn-check" name="options" id="radio3" autocomplete="off" />
+                                        <label class="btn btn-dark" for="radio3">Purchase History</label>
+                                    </div>
+                                    <div class="p-4" style={{ backgroundColor: "#f8f9fa" }}>
 
-                                    <input type="radio" class="btn-check" name="options" id="radio2" autocomplete="off" />
-                                    <label class="btn btn-dark" for="radio2">My services</label>
 
-                                    <input type="radio" class="btn-check" name="options" id="radio3" autocomplete="off" />
-                                    <label class="btn btn-dark" for="radio3">Purchase History</label>
+                                    </div>
                                 </div>
-                                <div class="p-4" style={{ backgroundColor: "#f8f9fa" }}>
 
-
-                                </div>
                             </div>
-
                         </div>
+
                     </div>
 
                 </div>
