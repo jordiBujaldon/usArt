@@ -6,6 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate,login
+from django.contrib.auth.decorators import login_required
 
 def log_in(request,username,password):
     isloged = False
@@ -25,10 +26,9 @@ def log_in(request,username,password):
             
             return JsonResponse({"respuesta": "El usuario no existe"})
             
+@login_required               
+def prova(request,username):
+    user1 = User.objects.get(username=username)
+    if user1.is_authenticated:
+        return JsonResponse({"respuesta": "true"})
         
-        
-        
-        # comprovar que l'usuari existeix a la base de dades
-        # si existeix return "Login correcte"
-        # Si fallo en contra retornar usuario o contaseña erroneo"
-        # si no return "Usuari no Registrat"
