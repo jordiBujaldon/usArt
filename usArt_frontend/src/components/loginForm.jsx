@@ -13,10 +13,15 @@ import {
   MDBInput
 }
   from 'mdb-react-ui-kit';
+import { Modal } from 'bootstrap';
 
 async function loginUser(credentials) {
-  return fetch('http://localhost:8080/login', {
-    method: 'POST',
+  let logResponse = "";
+  let loggedInfo;
+
+  let path = "/auth/login/" + credentials.username + "&" + credentials.password
+  return fetch(path, {
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json'
     },
@@ -27,24 +32,39 @@ async function loginUser(credentials) {
 
 function Login() {
   const [formErrors, setFormErrors] = useState({});
+  const [formResponse, setFormResponse] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
   const [token, setToken] = useState();
 
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
 
+  const handleAccept = (e) => {
+    if (loggedInfo == True) {
+      window.location.assign("http://localhost:3000/home")
+    } 
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmit(true);
-    const token = loginUser({
+    let response = loginUser({
       username,
       password
     });
-    setToken(token);
+    setFormResponse(response)
+    logResponse = formResponse[0]
+    loggedInfo = formResponse[1]
+
+
+
   };
 
-
+  useEffect(() => {
+    if (isSubmit) {
+      modal.show()
+    }
+  }, [formResponse]);
 
   return (
 
@@ -83,10 +103,10 @@ function Login() {
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div className="modal-body">
-                    <p>{ }</p>
+                    <p>{{ logResponse }}</p>
                   </div>
                   <div className="modal-footer">
-                    <button type="button" className="btn btn-outline-secondary">
+                    <button type="button" className="btn btn-outline-secondary" onClick={handleAccept}>
                       Ok
                     </button>
                   </div>
